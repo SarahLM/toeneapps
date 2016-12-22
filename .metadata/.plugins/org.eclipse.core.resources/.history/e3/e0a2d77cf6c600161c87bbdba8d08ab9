@@ -1,0 +1,16 @@
+
+
+
+
+
+public interface Toene extends java.rmi.Remote{
+	
+	double add(double a, double b) throws java.rmi.RemoteException;
+	
+	double subtract(double a, double b) throws java.rmi.RemoteException;
+	
+	double multiply(double a, double b) throws java.rmi.RemoteException;
+	
+	double divide(double a, double b) throws java.rmi.RemoteException;
+
+}

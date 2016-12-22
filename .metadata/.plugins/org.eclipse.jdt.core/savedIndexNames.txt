@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+C:\Users\s\Desktop\5.semester\toene\.metadata\.plugins\org.eclipse.jdt.core
+231367293.index
+671227290.index
+332183881.index
+1067617353.index

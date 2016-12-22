@@ -1,0 +1,37 @@
+package rmi;
+
+import java.rmi.*;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import ToeneMitarbeiter;
+
+
+public class Server {
+	
+	
+	public Server() {
+		try {
+			interfaces 
+			LocateRegistry.createRegistry(1099);
+		} catch (RemoteException e1) {
+			
+			e1.printStackTrace();
+		}
+		try {
+			Calculate c = new CalculateImpl();
+			Naming.rebind("rmi://localhost:1099/CalculatorService", c);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+	}
+
+	public static void main(String args[]) {
+		new Server();
+		}
+
+}
+

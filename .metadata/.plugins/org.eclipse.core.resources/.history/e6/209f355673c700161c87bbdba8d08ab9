@@ -1,0 +1,42 @@
+package rmi.mitarbeiter;
+
+
+import java.rmi.RemoteException;
+
+import rmi.interfaces.Toene;
+
+public class CalculateImpl extends java.rmi.server.UnicastRemoteObject implements Calculate {
+	
+	protected CalculateImpl() throws java.rmi.RemoteException {
+		super();
+		
+	}
+
+	@Override
+	public double add(double a, double b) throws RemoteException {
+		
+		return a+b;
+	}
+
+	@Override
+	public double subtract(double a, double b) throws RemoteException {
+		
+		return a-b;
+	}
+
+	@Override
+	public double multiply(double a, double b) throws RemoteException {
+		
+		return a*b;
+	}
+
+	@Override
+	public double divide(double a, double b) throws RemoteException {
+		
+		return a/b;
+	}
+
+	
+
+	
+}

@@ -1,0 +1,42 @@
+package rmi.chef;
+
+
+
+import java.rmi.Naming;
+import rmi.interfaces.Toene;
+import rmi.mitarbeiter.ToeneImpl;
+
+
+
+
+
+public class Client {
+	//Chef stellt Dienst zur Verfügung um nach ButtonKlick die entsprechende ID zur Verfügung zu stellen
+	
+
+	public static void main(String[] args) {
+		try {
+			Toene a = new ToeneImpl();
+			//int a = eingegebener Button;  
+			Naming.rebind("rmi://localhost:1099/ToeneService",a);
+			/*Toene a = (Toene) Naming
+			.lookup("rmi://localhost:1099/KlickService");*/
+			
+			
+			//hier muss die ID für den Ton gesendet werden
+			
+			
+		}
+			
+			/*System.out.println("2 + 3 = "+c.add(2, 3));
+			System.out.println("2 - 3 = "+c.subtract(2, 3));
+			System.out.println("2 * 3 = "+c.multiply(2, 3));
+			System.out.println("2 / 3 = "+c.divide(2, 3));
+			}*/
+			catch (Exception e) { 
+				e.printStackTrace();
+			}
+	}
+}
+
+
